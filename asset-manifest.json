@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/coba_countdown/static/css/main.69fd60f3.chunk.css",
+    "main.js": "/coba_countdown/static/js/main.1cdffee3.chunk.js",
+    "main.js.map": "/coba_countdown/static/js/main.1cdffee3.chunk.js.map",
+    "runtime-main.js": "/coba_countdown/static/js/runtime-main.dab6c959.js",
+    "runtime-main.js.map": "/coba_countdown/static/js/runtime-main.dab6c959.js.map",
+    "static/js/2.ff446ffd.chunk.js": "/coba_countdown/static/js/2.ff446ffd.chunk.js",
+    "static/js/2.ff446ffd.chunk.js.map": "/coba_countdown/static/js/2.ff446ffd.chunk.js.map",
+    "index.html": "/coba_countdown/index.html",
+    "precache-manifest.d73de5f41b8a43f47881651621130078.js": "/coba_countdown/precache-manifest.d73de5f41b8a43f47881651621130078.js",
+    "service-worker.js": "/coba_countdown/service-worker.js",
+    "static/css/main.69fd60f3.chunk.css.map": "/coba_countdown/static/css/main.69fd60f3.chunk.css.map",
+    "static/js/2.ff446ffd.chunk.js.LICENSE.txt": "/coba_countdown/static/js/2.ff446ffd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dab6c959.js",
+    "static/js/2.ff446ffd.chunk.js",
+    "static/css/main.69fd60f3.chunk.css",
+    "static/js/main.1cdffee3.chunk.js"
+  ]
+}
