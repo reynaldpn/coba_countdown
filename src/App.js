@@ -8,7 +8,7 @@ const oneHour = 60 * oneMinute
 const oneDay = 24 * oneHour
 
 class App extends React.Component {
-    dateTarget = moment('2020-11-06')
+    dateTarget = moment('2020-04-10')
 
     state = {
         diffs: this.getDateDiffs()
@@ -57,13 +57,13 @@ class App extends React.Component {
         tomorrow.setDate(tomorrow.getDate() + 1)
         tomorrow.setHours(0,0,0,0)
 
-        const hours = Math.round(Math.abs((tomorrow - Date.now()) / oneHour))
+        const hours = Math.round(Math.abs((tomorrow - Date.now()) / oneHour)) - 1
 
         const nextHourDate = new Date()
         nextHourDate.setHours(nextHourDate.getHours() + 1)
         nextHourDate.setMinutes(0)
 
-        const minutes = Math.round(Math.abs((nextHourDate - Date.now()) / oneMinute))
+        const minutes = Math.round(Math.abs((nextHourDate - Date.now()) / oneMinute)) - 1
 
         const nextMinuteDate = new Date()
         nextMinuteDate.setMinutes(nextMinuteDate.getMinutes() + 1)
