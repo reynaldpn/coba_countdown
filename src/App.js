@@ -11,7 +11,8 @@ class App extends React.Component {
     dateTarget = moment('2020-04-10')
 
     state = {
-        diffs: this.getDateDiffs()
+        diffs: this.getDateDiffs(),
+        isNowLaterThanDateTarget: false
     }
 
     componentDidMount() {
@@ -43,7 +44,12 @@ class App extends React.Component {
                 <p
                     className = 'time-left-from-now'
                 >
-                    {days} days, {hours} hours, {minutes} minutes, {seconds} seconds
+                    {
+                        this.state.isNowLaterThanDateTarget ?
+                            "The event has begun"
+                            :
+                            `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`
+                    }
                 </p>
             </div>
         )
@@ -57,7 +63,7 @@ class App extends React.Component {
         tomorrow.setDate(tomorrow.getDate() + 1)
         tomorrow.setHours(0,0,0,0)
 
-        const hours = Math.round(Math.abs((tomorrow - Date.now()) / oneHour)) - 1
+        const hours = Math.round(Math.abs((tomorrow - Date.now()) / oneHour))
 
         const nextHourDate = new Date()
         nextHourDate.setHours(nextHourDate.getHours() + 1)
@@ -81,8 +87,10 @@ class App extends React.Component {
 
     updateDiffs() {
         setTimeout(() => {
-            console.log('tes')
-            this.setState({diffs: this.getDateDiffs()})
+            this.setState({
+                diffs: this.getDateDiffs(),
+                isNowLaterThanDateTarget: this.dateTarget.toDate() < new Date()
+            })
 
             this.updateDiffs()
         }, 250)
