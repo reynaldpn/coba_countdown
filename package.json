@@ -35,7 +35,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0"
+    "gh-pages": "^5.0.0"
   },
   "homepage": "http://reynaldpn.github.io/coba_countdown"
 }
